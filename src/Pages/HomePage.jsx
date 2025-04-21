@@ -25,6 +25,7 @@ import { PiCursorFill } from "react-icons/pi";
 import { FaRocket } from "react-icons/fa";
 import { GoGraph } from "react-icons/go";
 import { IoScaleSharp } from "react-icons/io5";
+import Design from "../assets/design.mp4"
 
 const HomePage = () => {
   return (
@@ -119,6 +120,27 @@ const HomePage = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div className='h-screen w-full border-2 bg-white '>
+          <p className='text-9xl font-bold font-serif text-black p-8 w-[70%]'>Launch pixel perfect sites</p>
+        <div className='h-full w-full flex justify-between text-black p-4'>
+          <div className='h-full w-[50%] '>
+            <p className='w-[82%] text-2xl font-semibold font-sans'>Rethink the web dev cycle with Webflow. Give your design and marketing teams the power to launch sophisticated sites quickly — so your dev team can focus on more complex work, not pixel-perfect revisions.</p>
+            <a href="" className='h-20 w-48 relative top-10 border-2 text-xl p-2 bg-[#146ef5] text-white font-bold rounded-sm'>Get Started __ <span className='text-semibold'>It's free</span></a>
+          </div>
+          <div className='h-full w-[50%]'>
+          <video
+            src={Design}
+            controls
+            autoPlay
+            muted
+            playsInline
+            loop
+            preload=""
+            className="  w-full h-auto rounded-lg"
+          ></video>
+          </div>
+        </div>
         </div>
       </section>
     </>
