@@ -76,7 +76,6 @@ const SignUp = () => {
         }
       });
       console.log(response.data)
-      localStorage.setItem('token',token)
       toast.success("Registration successful!");
       navigate("/login")
 
@@ -192,6 +191,7 @@ const SignUp = () => {
         </div>
       </section>
       {/* <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} /> */}
+      {/* <ToastContainer/> */}
     </>
   );
 };

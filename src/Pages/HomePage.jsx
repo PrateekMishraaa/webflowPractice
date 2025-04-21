@@ -26,6 +26,7 @@ import { FaRocket } from "react-icons/fa";
 import { GoGraph } from "react-icons/go";
 import { IoScaleSharp } from "react-icons/io5";
 import Design from "../assets/design.mp4"
+import Footer from '../Components/Footer'
 
 const HomePage = () => {
   return (
@@ -143,6 +144,9 @@ const HomePage = () => {
         </div>
         </div>
       </section>
+     <div className='relative top-[450px]'>
+     <Footer/>
+     </div>
     </>
   )
 }
