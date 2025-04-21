@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-4">
           <a href="#" className="hover:underline decoration-blue-500 text-base">Login</a>
           <a href="#" className="hover:underline decoration-blue-500 text-base">Contact Sales</a>
-          <a href="#" className="bg-[#146ef5] text-white px-4 py-2 rounded-sm text-sm font-semibold">
+          <a href="/signup" className="bg-[#146ef5] text-white px-4 py-2 rounded-sm text-sm font-semibold">
             Get Started For Free
           </a>
         </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
             <li><a href="#">Login</a></li>
             <li><a href="#">Contact Sales</a></li>
             <li>
-              <a href="#" className="bg-[#146ef5] text-white px-4 py-2 rounded-sm text-sm font-semibold">
+              <a href="/signup" className="bg-[#146ef5] text-white px-4 py-2 rounded-sm text-sm font-semibold">
                 Get Started For Free
               </a>
             </li>
