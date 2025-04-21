@@ -21,6 +21,11 @@ import LogoSeventeen from "../assets/upwork.svg"
 import LogoEighteen from "../assets/deca.svg"
 import LogoNineteen from "../assets/discord.svg"
 import { LuArrowUpRight } from "react-icons/lu";
+import { PiCursorFill } from "react-icons/pi";
+import { FaRocket } from "react-icons/fa";
+import { GoGraph } from "react-icons/go";
+import { IoScaleSharp } from "react-icons/io5";
+
 const HomePage = () => {
   return (
     <>
@@ -51,41 +56,70 @@ const HomePage = () => {
               </a>
               <a
                 href="#"
-                className="w-40 text-white  font-semibold flex gap-2 "
+                className="w-40 text-white font-semibold flex gap-2"
               >
-                Learn More <LuArrowUpRight className='mt-1 text-xl hover:ml-10'/>
+                Learn More <LuArrowUpRight className='mt-1 text-xl hover:ml-10' />
               </a>
             </div>
           </div>
         </div>
-        <video src={Video} controls autoPlay   muted
-            playsInline loop preload=''></video>
-            <div className='h-40 w-full'>
-                <div className='h-20 w-full  flex justify-between p-6'>
-                    <img src={Logo} alt="logo1" className='h-fit' />
-                    <img src={Logotwo} alt="logo1" className='h-fit' />
-                    <img src={Logothree} alt="logo1" className='h-fit' />
-                    <img src={LogoFour} alt="logo1" className='h-fit' />
-                    <img src={LogoFive} alt="logo1" className='h-fit' />
-                    <img src={LogoSix} alt="logo1" className='h-fit' />
-                    <img src={LogoSeven} alt="logo1" className='h-fit' />
-                    <img src={LogoEight} alt="logo1" className='h-fit' />
-                    <img src={LogoNine} alt="logo1" className='h-fit' />
-                    <img src={LogoTen} alt="logo1" className='h-fit' />
-                </div>
-                <div className='h-20 w-full  flex justify-between p-6'>
-                    <img src={LogoEleven} alt="logo1" className='h-fit' />
-                    <img src={Logotwelve} alt="logo1" className='h-6' />
-                    <img src={Logothirteen} alt="logo1" className='h-fit' />
-                    <img src={LogoFourteen} alt="logo1" className='h-fit' />
-                    <img src={LogoFifteen} alt="logo1" className='h-6' />
-                    <img src={LogoSixteen} alt="logo1" className='h-fit' />
-                    <img src={LogoSeventeen} alt="logo1" className='h-fit' />
-                    <img src={LogoEighteen} alt="logo1" className='h-6' />
-                    <img src={LogoNineteen} alt="logo1" className='h-fit' />
-                    <img src={LogoTen} alt="logo1" className='h-fit' />
-                </div>
+
+        {/* Responsive Video */}
+        <div className="w-full px-4">
+          <video
+            src={Video}
+            controls
+            autoPlay
+            muted
+            playsInline
+            loop
+            preload=""
+            className="w-full h-auto rounded-lg"
+          ></video>
+        </div>
+
+        {/* Logo Section */}
+        <div className='py-10 px-4'>
+          <div className='flex flex-wrap justify-center items-center gap-6'>
+            {[Logo, Logotwo, Logothree, LogoFour, LogoFive, LogoSix, LogoSeven, LogoEight, LogoNine, LogoTen, LogoEleven, Logotwelve, Logothirteen, LogoFourteen, LogoFifteen, LogoSixteen, LogoSeventeen, LogoEighteen, LogoNineteen].map((logo, index) => (
+              <img src={logo} key={index} alt={`logo-${index}`} className='h-2 md:h-4' />
+            ))}
+          </div>
+        </div>
+
+        {/* Feature Cards */}
+        <div className='w-full px-4 py-10'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-white font-semibold'>
+            <div className='relative'>
+              <PiCursorFill className='absolute top-2 text-gray-600 text-2xl left-4' />
+              <p className='font-bold px-6 py-10'>Design and build</p>
+              <p className='font-semibold text-gray-400 px-6'>
+                Designers can take control of HTML, CSS, and JavaScript in a visual canvas — while marketers can work with pre-made, design-approved building blocks.
+              </p>
             </div>
+            <div className='relative'>
+              <FaRocket className='absolute top-2 text-gray-600 text-2xl left-4' />
+              <p className='font-bold px-6 py-10'>Publish and edit</p>
+              <p className='font-semibold text-gray-400 px-6'>
+                Choose how you want to add, edit, and update content at scale with Webflow's CMS: visually in our platform or programmatically through our headless APIs.
+              </p>
+            </div>
+            <div className='relative'>
+              <GoGraph className='absolute top-2 text-gray-600 text-2xl left-4' />
+              <p className='font-bold px-6 py-10'>Analyze and Optimize</p>
+              <p className='font-semibold text-gray-400 px-6'>
+                Transform your site into your most valuable marketing asset with native tools for AI-powered personalization, A/B testing, SEO, localization, and more.
+              </p>
+            </div>
+            <div className='relative'>
+              <IoScaleSharp className='absolute top-2 text-gray-600 text-2xl left-4' />
+              <p className='font-bold px-6 py-10'>Scale and collaborate</p>
+              <p className='font-semibold text-gray-400 px-6'>
+                15,000 websites are published with Webflow every hour. Confidently scale your site with tools for hosting, security, compliance, and publishing — plus connect to your tech stack with integrations and APIs.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   )
