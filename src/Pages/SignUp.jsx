@@ -54,7 +54,7 @@ const SignUp = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
     
-    // Clear error for this field when user starts typing
+   
     if (errors[name]) {
       setErrors({ ...errors, [name]: null });
     }
@@ -86,6 +86,7 @@ const SignUp = () => {
         MobileNumber: "",
         Password: "",
       });
+    
     } catch (error) {
       console.log(error);
       const message = error.response?.data?.message || "Registration failed. Please try again later.";
@@ -197,3 +198,38 @@ const SignUp = () => {
 };
 
 export default SignUp;
+// import React, { useEffect, useState } from 'react'
+// import axios from "axios"
+// const SignUp = () => {
+//   const [data,setData] = useState([]);
+//   const [error,setError]= useState(false);
+//   const [loading,setLoading] = useState(true)
+
+//   useEffect(()=>{
+//       const fetchdata = async ()=>{
+//         try{
+//             const response = await axios.get("https://fakestoreapi.com/products/")
+//             console.log(response.data)
+//             setData(response.data)
+//         }catch(error){
+//           console.log(error)
+//           setError(true)
+//         }
+//       }
+//       fetchdata()
+//   },[])
+//   return (
+//     <div>
+//       hello
+//       {
+//         data.map((item,index)=>(
+//             <div key={index}>
+//               <p>{item.title}</p>
+//             </div>
+//         ))
+//       }
+//     </div>
+//   )
+// }
+
+// export default SignUp
