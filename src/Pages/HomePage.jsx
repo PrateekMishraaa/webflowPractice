@@ -183,10 +183,12 @@ const HomePage = () => {
       </section>
       
       {/* Best Company Section */}
-      <BestCompany />
+     <div className='h-[100vh] w-full'>
+     <BestCompany />
       
       {/* Footer */}
       <Footer />
+     </div>
     </div>
   )
 }
